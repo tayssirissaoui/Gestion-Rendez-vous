@@ -1,0 +1,46 @@
+<app-navacc></app-navacc>
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="Signup">
+    <input type="text" formControlName="Nom" placeholder="Nom">
+    <div *ngIf="signupForm.get('Nom')?.invalid && signupForm.get('Nom')?.touched">
+      <p *ngIf="signupForm.get('Nom')?.hasError('required')">Le champ Nom est requis.</p>
+    </div>
+  
+    <input type="text" formControlName="prenom" placeholder="Prénom">
+    <div *ngIf="signupForm.get('prenom')?.invalid && signupForm.get('prenom')?.touched">
+      <p *ngIf="signupForm.get('prenom')?.hasError('required')">Le champ Prénom est requis.</p>
+    </div>
+  
+    <input type="text" formControlName="Adresse" placeholder="Adresse">
+    <div *ngIf="signupForm.get('Adresse')?.invalid && signupForm.get('Adresse')?.touched">
+      <p *ngIf="signupForm.get('Adresse')?.hasError('required')">Le champ Adresse est requis.</p>
+    </div>
+  
+    <input type="number" formControlName="numeroDeTelephone" placeholder="Numéro de téléphone">
+    <div *ngIf="signupForm.get('numeroDeTelephone')?.invalid && signupForm.get('numeroDeTelephone')?.touched">
+      <p *ngIf="signupForm.get('numeroDeTelephone')?.hasError('required')">Le numéro de téléphone est requis.</p>
+      <p *ngIf="signupForm.get('numeroDeTelephone')?.hasError('pattern')">Le numéro de téléphone doit être valide.</p>
+    </div>
+  
+    <input type="email" formControlName="email" placeholder="Email">
+    <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+      <p *ngIf="signupForm.get('email')?.hasError('required')">L'email est requis.</p>
+      <p *ngIf="signupForm.get('email')?.hasError('email')">L'email n'est pas valide.</p>
+    </div>
+      <select formControlName="whoAreYou">
+      <option value="" disabled selected>Who are you?</option>
+      <option value="doctor">Doctor</option>
+      <option value="patient">Patient</option>
+      <option value="secretary">Secretary</option>
+    </select>
+    <div *ngIf="signupForm.get('whoAreYou')?.invalid && signupForm.get('whoAreYou')?.touched">
+      <p *ngIf="signupForm.get('whoAreYou')?.hasError('required')">Ce champ est requis.</p>
+    </div>
+  
+    <input type="password" formControlName="password" placeholder="Password">
+    <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+      <p *ngIf="signupForm.get('password')?.hasError('required')">Le mot de passe est requis.</p>
+    </div>
+  
+    <button type="submit">Sign up</button>
+  </form>
+  

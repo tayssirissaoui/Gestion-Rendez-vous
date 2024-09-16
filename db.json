@@ -1,0 +1,24 @@
+{
+  "user": [
+    {
+      "id": "87cf",
+      "Nom": "tayssir",
+      "prenom": "issaoui",
+      "Adresse": "wouroud",
+      "numeroDeTelephone": 50814041,
+      "email": "tayssirissaoui@gmail.com",
+      "whoAreYou": "doctor",
+      "password": "2003"
+    },
+    {
+      "id": "489d",
+      "Nom": "salma",
+      "prenom": "ouni",
+      "Adresse": "sidi bouzid",
+      "numeroDeTelephone": 20789456,
+      "email": "salmaounigmial@com",
+      "whoAreYou": "patient",
+      "password": "2020"
+    }
+  ]
+}

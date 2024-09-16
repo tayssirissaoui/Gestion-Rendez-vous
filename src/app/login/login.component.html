@@ -1,0 +1,12 @@
+
+<app-navacc></app-navacc>
+<body>
+	
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="login">
+	<input type="text" formControlName="email" placeholder="Email">
+	<input type="password" formControlName="password" placeholder="Password">
+	<button type="submit">Login</button>
+  </form>
+</body>
+
+  
